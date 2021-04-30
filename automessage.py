@@ -5,7 +5,7 @@ import time
 from newsapi import NewsApiClient
 
 # Target number
-number = 00_0_00_0000_000
+number = 000000000000
 
 
 # Fetch news
@@ -43,8 +43,12 @@ if len(news_list) > 0:
 
 # Interact with GUI
         content = format(
-            break_line + '*' + title + '*' + '  ' +
-            description + break_line + 'Fonte: '+source
+            break_line +
+            '*' + title + '*'
+            + break_line +
+            '_' + description + '_'
+            + break_line
+            + 'Fonte: ' + source
         )
 
         pyautogui.write(content)
