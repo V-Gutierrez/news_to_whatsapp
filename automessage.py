@@ -30,6 +30,9 @@ webbrowser.open("https://web.whatsapp.com/send?phone=" + str(number), 0, 1)
 news_list = top_headlines['articles']
 break_line = "\n"
 
+# Avoid ban for spamming
+limit = 5
+
 
 if len(news_list) > 0:
     for article_index, value in enumerate(news_list):
@@ -48,7 +51,7 @@ if len(news_list) > 0:
         pyautogui.press('enter')
         time.sleep(5)
 
-        if article_index == 5:
+        if article_index == limit:
             break
 else:
     pyautogui.write('Sem notícias por hoje')
