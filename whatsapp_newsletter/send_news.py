@@ -21,7 +21,8 @@ def send_news(webwhatsapp_url, newsapi_personal_key, news_language, news_country
             description = value['description']
             source = value['source']['name']
 
-    # Interact with GUI
+    # TODO: Fix special characters bug and use interpolation instead of concatenation
+
             content = format(
                 break_line +
                 '*' + title + '*'
