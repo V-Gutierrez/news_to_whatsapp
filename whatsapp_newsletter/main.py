@@ -8,7 +8,7 @@ api_key = config['API_KEY']
 
 
 send_news(
-    'https://web.whatsapp.com/send?phone={target}',
+    "https://web.whatsapp.com/send?phone={target}",
     api_key,
     'pt',
     'br',
